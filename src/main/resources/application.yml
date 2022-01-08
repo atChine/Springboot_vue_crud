@@ -1,0 +1,24 @@
+
+# druid 数据源配制
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db1?serverTimezone=UTC
+      username: root
+      password: adminroot
+
+# mybatis-plus
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto # 主键策略
+  configuration:
+    # 开启MyBatisPlus的日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#设置端口
+server:
+  port: 8090
+
